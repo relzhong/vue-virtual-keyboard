@@ -1,6 +1,6 @@
 {
   "name": "vue-virtual-keyboard",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Use jQuery Virtual Keyboard in Vue",
   "author": "relzhong <relzhong@outlook.com>",
   "main": "dist/vue-virtual-keyboard.common.js",
