@@ -21,14 +21,51 @@ npm install --save vue-virtual-keyboard
 
 ### Bundler (Webpack, Rollup)
 
-```js
-import Vue from 'vue'
-import VueVirtualKeyboard from 'vue-virtual-keyboard'
-// You need a specific loader for CSS files like https://github.com/webpack/css-loader
-import 'vue-virtual-keyboard/dist/vue-virtual-keyboard.css'
-
-Vue.use(VueVirtualKeyboard)
+```vue
+<keyboard
+                  :options="keyboardOption"
+                  class="ui-keyboard-case"
+                  v-model="pym"
+                ></keyboard>
 ```
+
+```js
+import { Keyboard } from 'vue-virtual-keyboard/dist/vue-virtual-keyboard';
+```
+
+```js
+    keyboardOption: {
+        usePreview: false,
+        stickyShift: false,
+        autoAccept: true,
+        language: 'zh',
+        display: { // overwrite key display
+          accept: '确认',
+          bksp: '删除',
+          cancel: '取消',
+          enter: '回车',
+        },
+      },
+```
+```css
+  .ui-keyboard-case {
+    font-size: 40px;
+    text-align: center;
+	  /* background: #fefefe; */
+  	border: 1px solid #ffe3e2;
+    padding: 4px;
+    width: 38%;
+    height: auto;
+    margin-right: 5%;
+    /* left: 25%; */
+    /* top: auto;
+    bottom: 0px; */
+    /* position: fixed; */
+    
+  }
+
+```
+
 
 ### Browser
 
