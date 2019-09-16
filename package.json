@@ -1,12 +1,12 @@
 {
   "name": "vue-virtual-keyboard",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Use jQuery Virtual Keyboard in Vue",
   "author": "relzhong <relzhong@outlook.com>",
   "main": "dist/vue-virtual-keyboard.common.js",
-  "module": "dist/vue-virtual-keyboard.esm.js",
-  "browser": "dist/vue-virtual-keyboard.js",
-  "unpkg": "dist/vue-virtual-keyboard.js",
+  "module": "src/index.js",
+  "browser": "src/index.js",
+  "unpkg": "dist/vue-virtual-keyboard.min.js",
   "style": "dist/vue-virtual-keyboard.css",
   "files": [
     "dist",
@@ -114,7 +114,8 @@
       "vue-style-loader/lib/addStylesClient.js",
       "events",
       "ansi-html",
-      "style-loader/addStyles.js"
+      "style-loader/addStyles.js",
+      "jquery/dist/jquery.js"
     ]
   },
   "repository": {

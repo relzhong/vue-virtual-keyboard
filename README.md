@@ -23,14 +23,14 @@ npm install --save vue-virtual-keyboard
 
 ```vue
 <keyboard
-                  :options="keyboardOption"
-                  class="ui-keyboard-case"
-                  v-model="pym"
-                ></keyboard>
+          :options="keyboardOption"
+          class="ui-keyboard-case"
+          v-model="pym"
+        ></keyboard>
 ```
 
 ```js
-import { Keyboard } from 'vue-virtual-keyboard/dist/vue-virtual-keyboard';
+import { Keyboard } from 'vue-virtual-keyboard';
 ```
 
 ```js
@@ -68,6 +68,7 @@ import { Keyboard } from 'vue-virtual-keyboard/dist/vue-virtual-keyboard';
 
 
 ### Browser
+*Example in [jsfiddle](https://jsfiddle.net/relzhong/crmad2wy/)*
 
 ```html
 <!-- Include after Vue -->

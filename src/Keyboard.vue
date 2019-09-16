@@ -6,7 +6,7 @@
 </template>
 
 <style>
-  @import "light.css";
+  @import "./light.css";
 </style>
 
 <script>
