@@ -3,7 +3,7 @@ import { createVM } from '../helpers/utils.js'
 
 describe('Hello.vue', function () {
   it('should render correct contents', function () {
-    const vm = createVM(this, `
+    createVM(this, `
     <Keyboard
       debug
       :options="{usePreview: false, stickyShift: false }"
