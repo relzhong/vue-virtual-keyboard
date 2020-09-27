@@ -21,6 +21,7 @@ export default {
   },
   data () {
     return {
+      unwatch: null,
       className: 'keyboard-wrapper'
     }
   },
@@ -57,8 +58,17 @@ export default {
         that.handleChange(null, keyboard.preview.value)
       })
     }
+
+    // set default value
+    jQuery(this.$refs.keyboardRef).val(this.value)
+
+   // bind value
+    this.unwatch = this.$watch('value', (newValue) => {
+      jQuery(this.$refs.keyboardRef).val(newValue)
+    })
   },
   beforeDestroy () {
+    if (this.unwatch) this.unwatch()
     jQuery(this.$refs.keyboardRef).remove()
   },
   methods: {
@@ -71,7 +81,9 @@ export default {
       this.keyboard = keyboardSelector.getkeyboard()
     },
     clear () {
-      this.$emit('update:value', '')
+      var keyboard = jQuery(this.$refs.keyboardRef)
+      keyboard.val('')
+      this.handleChange('', '')
     },
     select () {
       this.$refs.keyboardRef.select()
